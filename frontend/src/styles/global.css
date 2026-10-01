@@ -33,3 +33,22 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+.ok-text { color: #067647; }
+.link:disabled { color: #98a2b3; cursor: not-allowed; }
+
+/* 详情/编辑弹窗 */
+.modal-mask { position: fixed; inset: 0; background: rgba(16, 24, 40, 0.45); display: flex; align-items: center; justify-content: center; z-index: 20; }
+.modal-card { background: #fff; border-radius: 10px; width: 560px; max-width: calc(100vw - 32px); max-height: calc(100vh - 64px); overflow: auto; box-shadow: 0 12px 32px rgba(16, 24, 40, 0.2); }
+.modal-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--border); }
+.modal-head h3 { margin: 0; font-size: 15px; }
+.modal-body { padding: 16px 18px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.modal-tip { grid-column: 1 / -1; color: var(--muted); font-size: 12px; margin: 0; }
+.detail-readonly { grid-column: 1 / -1; display: flex; gap: 20px; font-size: 13px; color: var(--muted); }
+.detail-field input { width: 100%; }
+.detail-field input:disabled { background: #f2f4f7; color: #475467; }
+.modal-body .error-text { grid-column: 1 / -1; margin: 0; }
+.modal-foot { display: flex; justify-content: flex-end; gap: 8px; padding: 12px 18px; border-top: 1px solid var(--border); }
+
+/* 运营看板：可点击的模块行 */
+.module-link { color: var(--brand); background: none; border: none; padding: 0; font: inherit; cursor: pointer; text-decoration: underline; }
+.dashboard-tools { margin-bottom: 10px; }
